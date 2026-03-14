@@ -103,26 +103,6 @@
 			return article;
 		}
 
-		function createOverviewArticle(works) {
-			const article = document.createElement('article');
-			article.className = 'box post post-excerpt';
-
-			const header = document.createElement('header');
-			const title = document.createElement('h2');
-			const titleText = document.createElement('a');
-			titleText.textContent = '作品一覽';
-			title.appendChild(titleText);
-			header.appendChild(title);
-			article.appendChild(header);
-
-			if (works.length > 0) {
-				const randomWork = works[Math.floor(Math.random() * works.length)];
-				article.appendChild(generateButton('images/main.png', `隨機推薦：${randomWork.title}`, randomWork.url));
-			}
-
-			return article;
-		}
-
 		async function generateGuild() {
 			const content = document.getElementById('content');
 			const [eventInfo, playerHashMap, workUserMap] = await Promise.all([
@@ -135,18 +115,16 @@
 
 			const resolvedWorks = (workUserMap || []).map(work => {
 				const player = playerMap.get(work.hashId);
-				const displayName = player ? player.name : work.name || `未知使用者(${work.hashId})`;
 				return {
 					...work,
 					src: player ? player.image : (work.image || 'images/main.png'),
-					buttonTitle: `${displayName}：${work.title}`,
+					buttonTitle: work.title,
 					url: encodeURI(work.url),
 					uid: player ? player.uid : (work.uid || 9999)
 				};
 			});
 
 			resolvedWorks.sort((a, b) => a.uid - b.uid || a.title.localeCompare(b.title, 'zh-Hant'));
-			content.appendChild(createOverviewArticle(resolvedWorks));
 
 			const renderedTopics = new Set();
 			(eventInfo.topics || []).forEach(topic => {
