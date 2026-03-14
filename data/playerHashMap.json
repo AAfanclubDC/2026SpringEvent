@@ -1,0 +1,191 @@
+[
+  {
+    "uid": 1,
+    "id": "943113632433197108",
+    "name": "pray_unbeliever",
+    "hashId": "9cb117bd",
+    "image": "images/players/1.png"
+  },
+  {
+    "uid": 2,
+    "id": "861816302083506176",
+    "name": "高興八咫烏",
+    "hashId": "4799ca4b",
+    "image": "images/players/2.png"
+  },
+  {
+    "uid": 3,
+    "id": "437216391649558529",
+    "name": "priestessiswatching",
+    "hashId": "4ccdd53d",
+    "image": "images/players/3.png"
+  },
+  {
+    "uid": 4,
+    "id": "442626645048819723",
+    "name": "《來成為反派吧》一蕉",
+    "hashId": "bc7f662a",
+    "image": "images/players/4.png"
+  },
+  {
+    "uid": 5,
+    "id": "227679032722980868",
+    "name": "清楚山羊",
+    "hashId": "793ebbba",
+    "image": "images/players/5.png"
+  },
+  {
+    "uid": 6,
+    "id": "503173738636771329",
+    "name": "ΑΟΙ",
+    "hashId": "ad2d2599",
+    "image": "images/players/6.png"
+  },
+  {
+    "uid": 7,
+    "id": "713820377410830348",
+    "name": "格林【勇者】",
+    "hashId": "4cf54c2f",
+    "image": "images/players/7.png"
+  },
+  {
+    "uid": 8,
+    "id": "692199998267457548",
+    "name": "hibiki_1453",
+    "hashId": "c6dfce4c",
+    "image": "images/players/8.png"
+  },
+  {
+    "uid": 9,
+    "id": "798717197563723777",
+    "name": "鬼哪有影子-猫踩着影子",
+    "hashId": "a47585a8",
+    "image": "images/players/9.png"
+  },
+  {
+    "uid": 10,
+    "id": "1438056640732467220",
+    "name": "aoibasa",
+    "hashId": "9a800be8",
+    "image": "images/players/10.png"
+  },
+  {
+    "uid": 11,
+    "id": "560758955140317184",
+    "name": "〖ヰ〗World Is Mineの小祥【It's My稿!!!】",
+    "hashId": "97712e83",
+    "image": "images/players/11.png"
+  },
+  {
+    "uid": 12,
+    "id": "540902086401851402",
+    "name": "【[][]】檸檬",
+    "hashId": "fbf7fcf8",
+    "image": "images/players/12.png"
+  },
+  {
+    "uid": 13,
+    "id": "895187249669492797",
+    "name": "tanks555",
+    "hashId": "a84cd8ee",
+    "image": "images/players/13.png"
+  },
+  {
+    "uid": 14,
+    "id": "747849754700152882",
+    "name": "【三和言：叫姊姊 雞婆】METEOR",
+    "hashId": "b20bbc88",
+    "image": "images/players/14.png"
+  },
+  {
+    "uid": 15,
+    "id": "1185098543824912394",
+    "name": "tanxi0625_84768",
+    "hashId": "92274612",
+    "image": "images/players/15.png"
+  },
+  {
+    "uid": 16,
+    "id": "668566107904278540",
+    "name": "♡辣妹♡Enki",
+    "hashId": "41bfbee7",
+    "image": "images/players/16.png"
+  },
+  {
+    "uid": 17,
+    "id": "361420943492513792",
+    "name": "【燃盡】剪刀【充能中】",
+    "hashId": "83713f38",
+    "image": "images/players/17.png"
+  },
+  {
+    "uid": 18,
+    "id": "754884397819232331",
+    "name": "tiantichilun",
+    "hashId": "c8b78463",
+    "image": "images/players/18.png"
+  },
+  {
+    "uid": 19,
+    "id": "271367053938655232",
+    "name": "【社畜爽】虛子",
+    "hashId": "095ee356",
+    "image": "images/players/19.png"
+  },
+  {
+    "uid": 20,
+    "id": "977594766927736942",
+    "name": "二阶堂真白☆",
+    "hashId": "ca520bf9",
+    "image": "images/players/20.png"
+  },
+  {
+    "uid": 21,
+    "id": "356326487005200395",
+    "name": "英格丽德「InGrid」（痛苦地意识到自己是工作狂）",
+    "hashId": "358168a0",
+    "image": "images/players/21.png"
+  },
+  {
+    "uid": 22,
+    "id": "410973818413252610",
+    "name": "旁白",
+    "hashId": "961ec158",
+    "image": "images/players/22.png"
+  },
+  {
+    "uid": 23,
+    "id": "706774301805903892",
+    "name": "PintBox",
+    "hashId": "ec1fb95c",
+    "image": "images/players/23.png"
+  },
+  {
+    "uid": 24,
+    "id": "640945445622906880",
+    "name": "鴿子的化身",
+    "hashId": "8c6def88",
+    "image": "images/players/24.png"
+  },
+  {
+    "uid": 25,
+    "id": "101683976409739264",
+    "name": "快了黃金周快到了的79",
+    "hashId": "d8c65a90",
+    "image": "images/players/25.png"
+  },
+  {
+    "uid": 26,
+    "id": "760668887670325269",
+    "name": "鳥類",
+    "hashId": "ba47fd02",
+    "image": "images/players/26.png"
+  },
+  {
+    "uid": 27,
+    "id": "154598712297914368",
+    "name": "【聖夜竜の精神】二氧化硫",
+    "hashId": "3b893f4b",
+    "image": "images/players/27.png"
+  }
+]

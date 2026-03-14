@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<html lang="zh-tw">
+
+<head>
+	<title>2026 春季活動</title>
+	<meta name="google-site-verification" content="aMwt2RMKHUzulP9lSdXEtx2oH7EuzPh4qB-qFb3HMUU" />
+	<meta name="keywords" content="ascii art,AA同好會,AA,discord群組" />
+	<meta name="description" content="AA同好會 2026 春季活動作品一覽" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta property="og:title" content="AA同好會 2026 春季活動" />
+	<meta property="og:description" content="AA同好會Discord分部" />
+	<meta property="og:url" content="https://aafanclubdc.github.io/2026SpringEvent/" />
+	<meta property="og:image" content="https://aafanclubdc.github.io/main.png" />
+	<link rel="stylesheet" href="/assets/css/main.css" />
+	<link rel="stylesheet" href="/assets/css/buttom.css" />
+	<script src="/assets/js/GenerateButton.js"></script>
+	<script src="/assets/js/defaultPage.js"></script>
+	<script src="/assets/js/queryParamsRouter.js"></script>
+	<style>
+		article a img {
+			max-width: 800px;
+			height: auto;
+		}
+
+		.topic-empty {
+			color: #777;
+			margin: 0.8rem 0 0.2rem;
+		}
+	</style>
+</head>
+
+<body class="is-preload">
+	<div id="content">
+		<article class="box post post-excerpt">
+			<header>
+				<h2>AA春季活動 2026</h2>
+				<p>主題投稿一覽</p>
+			</header>
+			<div class="info">
+				<span class="date"><span class="month">Mar<span>ch</span></span> <span class="day">15</span><span
+						class="year">, 2026</span></span>
+			</div>
+			<p>
+				<strong>2026年春季活動</strong><br>
+				本頁依照活動主題分區展示投稿作品。
+			</p>
+		</article>
+	</div>
+
+	<div id="sidebar">
+		<h1 id="logo"><a>AA同好會</a></h1>
+		<nav id="nav">
+			<ul>
+				<li class="current"><a onClick="window.location.href='/'">首頁</a></li>
+			</ul>
+		</nav>
+		<section class="box text-style1">
+			<div class="inner">
+				<p>
+					<strong>Striped:</strong> A free and fully responsive HTML5 site
+					template designed by <a href="http://twitter.com/ajlkn">AJ</a> for <a
+						href="http://html5up.net/">HTML5 UP</a>
+				</p>
+			</div>
+		</section>
+		<ul id="copyright">
+			<li>&copy; Untitled.</li>
+			<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+		</ul>
+	</div>
+
+	<script src="/assets/js/jquery.min.js"></script>
+	<script src="/assets/js/browser.min.js"></script>
+	<script src="/assets/js/breakpoints.min.js"></script>
+	<script src="/assets/js/util.js"></script>
+	<script src="/assets/js/main.js"></script>
+	<script>
+		function createTopicArticle(topic, works) {
+			const article = document.createElement('article');
+			article.className = 'box post post-excerpt';
+
+			const header = document.createElement('header');
+			const title = document.createElement('h2');
+			const titleText = document.createElement('a');
+			titleText.textContent = topic;
+			title.appendChild(titleText);
+			header.appendChild(title);
+			article.appendChild(header);
+
+			if (works.length === 0) {
+				const empty = document.createElement('p');
+				empty.className = 'topic-empty';
+				empty.textContent = '尚無投稿';
+				article.appendChild(empty);
+			}
+
+			works.forEach(work => {
+				const button = generateButton(work.src, work.buttonTitle, work.url);
+				article.appendChild(button);
+			});
+
+			return article;
+		}
+
+		function createOverviewArticle(works) {
+			const article = document.createElement('article');
+			article.className = 'box post post-excerpt';
+
+			const header = document.createElement('header');
+			const title = document.createElement('h2');
+			const titleText = document.createElement('a');
+			titleText.textContent = '作品一覽';
+			title.appendChild(titleText);
+			header.appendChild(title);
+			article.appendChild(header);
+
+			if (works.length > 0) {
+				const randomWork = works[Math.floor(Math.random() * works.length)];
+				article.appendChild(generateButton('images/main.png', `隨機推薦：${randomWork.title}`, randomWork.url));
+			}
+
+			return article;
+		}
+
+		async function generateGuild() {
+			const content = document.getElementById('content');
+			const [eventInfo, playerHashMap, workUserMap] = await Promise.all([
+				fetch('./eventInfo.json').then(response => response.json()),
+				fetch('./data/playerHashMap.json').then(response => response.json()),
+				fetch('./data/workUserMap.json').then(response => response.json())
+			]);
+
+			const playerMap = new Map((playerHashMap || []).map(player => [player.hashId, player]));
+
+			const resolvedWorks = (workUserMap || []).map(work => {
+				const player = playerMap.get(work.hashId);
+				const displayName = player ? player.name : work.name || `未知使用者(${work.hashId})`;
+				return {
+					...work,
+					src: player ? player.image : (work.image || 'images/main.png'),
+					buttonTitle: `${displayName}：${work.title}`,
+					url: encodeURI(work.url),
+					uid: player ? player.uid : (work.uid || 9999)
+				};
+			});
+
+			resolvedWorks.sort((a, b) => a.uid - b.uid || a.title.localeCompare(b.title, 'zh-Hant'));
+			content.appendChild(createOverviewArticle(resolvedWorks));
+
+			const renderedTopics = new Set();
+			(eventInfo.topics || []).forEach(topic => {
+				const topicWorks = resolvedWorks.filter(work => work.topic === topic);
+				content.appendChild(createTopicArticle(topic, topicWorks));
+				renderedTopics.add(topic);
+			});
+
+			const unknownTopicWorks = resolvedWorks.filter(work => !renderedTopics.has(work.topic));
+			if (unknownTopicWorks.length > 0) {
+				content.appendChild(createTopicArticle('未分類', unknownTopicWorks));
+			}
+		}
+
+		generateGuild().catch(err => {
+			console.error('載入活動首頁失敗：', err);
+		});
+	</script>
+</body>
+
+</html>
