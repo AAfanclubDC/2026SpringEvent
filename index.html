@@ -55,6 +55,14 @@
 				<li class="current"><a onClick="window.location.href='/'">首頁</a></li>
 			</ul>
 		</nav>
+
+		<section class="box recent-posts">
+			<header>
+				<h2>作品連結</h2>
+			</header>
+			<ul id="work-links"></ul>
+		</section>
+
 		<section class="box text-style1">
 			<div class="inner">
 				<p>
@@ -103,6 +111,35 @@
 			return article;
 		}
 
+		function renderSidebarLinks(works, topics) {
+			const list = document.getElementById('work-links');
+			if (!list) return;
+			list.innerHTML = '';
+
+			const topicOrder = [...(topics || [])];
+			const unknownTopics = [...new Set(works.map(work => work.topic).filter(topic => !topicOrder.includes(topic)))];
+			topicOrder.push(...unknownTopics);
+
+			topicOrder.forEach(topic => {
+				const topicWorks = works.filter(work => work.topic === topic);
+				if (topicWorks.length === 0) return;
+
+				const topicLi = document.createElement('li');
+				topicLi.className = 'topic';
+				topicLi.textContent = topic;
+				list.appendChild(topicLi);
+
+				topicWorks.forEach(work => {
+					const workLi = document.createElement('li');
+					const link = document.createElement('a');
+					link.href = work.url;
+					link.textContent = work.title;
+					workLi.appendChild(link);
+					list.appendChild(workLi);
+				});
+			});
+		}
+
 		async function generateGuild() {
 			const content = document.getElementById('content');
 			const [eventInfo, playerHashMap, workUserMap] = await Promise.all([
@@ -125,6 +162,7 @@
 			});
 
 			resolvedWorks.sort((a, b) => a.uid - b.uid || a.title.localeCompare(b.title, 'zh-Hant'));
+			renderSidebarLinks(resolvedWorks, eventInfo.topics || []);
 
 			const renderedTopics = new Set();
 			(eventInfo.topics || []).forEach(topic => {
