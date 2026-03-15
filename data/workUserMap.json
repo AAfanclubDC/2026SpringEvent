@@ -20,6 +20,16 @@
     "image": "images/players/4.png"
   },
   {
+    "hashId": "83713f38",
+    "topic": "Afterstory--勇者跟魔王的後日談",
+    "file": "就算如此旅途仍在繼續.html",
+    "title": "就算如此旅途仍在繼續",
+    "url": "pieces/83713f38/Afterstory--勇者跟魔王的後日談/就算如此旅途仍在繼續.html",
+    "uid": 17,
+    "name": "【燃盡】剪刀【充能中】",
+    "image": "images/players/17.png"
+  },
+  {
     "hashId": "095ee356",
     "topic": "Corpsemen",
     "file": "新魔法少女部隊－Corpsemen.html",
@@ -38,6 +48,16 @@
     "uid": 20,
     "name": "二阶堂真白☆",
     "image": "images/players/20.png"
+  },
+  {
+    "hashId": "ec1fb95c",
+    "topic": "Fate Deed",
+    "file": "FateDeed.html",
+    "title": "FateDeed",
+    "url": "pieces/ec1fb95c/Fate Deed/FateDeed.html",
+    "uid": 23,
+    "name": "PintBox",
+    "image": "images/players/23.png"
   },
   {
     "hashId": "4799ca4b",
@@ -68,6 +88,16 @@
     "uid": 1,
     "name": "pray_unbeliever",
     "image": "images/players/1.png"
+  },
+  {
+    "hashId": "a84cd8ee",
+    "topic": "俺不想尋思",
+    "file": "假面騎士_物騎.html",
+    "title": "假面騎士_物騎",
+    "url": "pieces/a84cd8ee/俺不想尋思/假面騎士_物騎.html",
+    "uid": 13,
+    "name": "tanks555",
+    "image": "images/players/13.png"
   },
   {
     "hashId": "92274612",
@@ -187,7 +217,7 @@
     "url": "pieces/961ec158/有所刪改的故事/hard boiled.html",
     "uid": 22,
     "name": "旁白",
-    "image": "images/players/22.webp"
+    "image": "images/players/22.png"
   },
   {
     "hashId": "4cf54c2f",
@@ -260,6 +290,16 @@
     "image": "images/players/3.png"
   },
   {
+    "hashId": "4ccdd53d",
+    "topic": "魔女的夜宴",
+    "file": "魔女誕生之儀.html",
+    "title": "魔女誕生之儀",
+    "url": "pieces/4ccdd53d/魔女的夜宴/魔女誕生之儀.html",
+    "uid": 3,
+    "name": "priestessiswatching",
+    "image": "images/players/3.png"
+  },
+  {
     "hashId": "9a800be8",
     "topic": "魔女的夜宴",
     "file": "魔女的伊布宴.html",
@@ -272,7 +312,7 @@
   {
     "hashId": "97712e83",
     "topic": "魔女的夜宴",
-    "file": "event.html",
+    "file": "叛逆的魔女；虛偽的夜宴.html",
     "title": "叛逆的魔女；虛偽的夜宴",
     "url": "pieces/97712e83/魔女的夜宴/叛逆的魔女；虛偽的夜宴.html",
     "uid": 11,
@@ -305,6 +345,16 @@
     "file": "2026接盤季 魔女的夜宴.html",
     "title": "2026接盤季 魔女的夜宴",
     "url": "pieces/8c6def88/魔女的夜宴/2026接盤季 魔女的夜宴.html",
+    "uid": 24,
+    "name": "鴿子的化身",
+    "image": "images/players/24.png"
+  },
+  {
+    "hashId": "8c6def88",
+    "topic": "魔女的夜宴",
+    "file": "名字來不及想了.html",
+    "title": "名字來不及想了",
+    "url": "pieces/8c6def88/魔女的夜宴/名字來不及想了.html",
     "uid": 24,
     "name": "鴿子的化身",
     "image": "images/players/24.png"
