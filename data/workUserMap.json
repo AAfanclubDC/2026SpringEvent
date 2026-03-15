@@ -217,7 +217,7 @@
     "url": "pieces/961ec158/有所刪改的故事/hard boiled.html",
     "uid": 22,
     "name": "旁白",
-    "image": "images/players/22.png"
+    "image": "images/players/22.webp"
   },
   {
     "hashId": "4cf54c2f",
@@ -282,16 +282,6 @@
   {
     "hashId": "4ccdd53d",
     "topic": "魔女的夜宴",
-    "file": "「魔女誕生之儀」.html",
-    "title": "「魔女誕生之儀」",
-    "url": "pieces/4ccdd53d/魔女的夜宴/「魔女誕生之儀」.html",
-    "uid": 3,
-    "name": "priestessiswatching",
-    "image": "images/players/3.png"
-  },
-  {
-    "hashId": "4ccdd53d",
-    "topic": "魔女的夜宴",
     "file": "魔女誕生之儀.html",
     "title": "魔女誕生之儀",
     "url": "pieces/4ccdd53d/魔女的夜宴/魔女誕生之儀.html",
@@ -345,16 +335,6 @@
     "file": "2026接盤季 魔女的夜宴.html",
     "title": "2026接盤季 魔女的夜宴",
     "url": "pieces/8c6def88/魔女的夜宴/2026接盤季 魔女的夜宴.html",
-    "uid": 24,
-    "name": "鴿子的化身",
-    "image": "images/players/24.png"
-  },
-  {
-    "hashId": "8c6def88",
-    "topic": "魔女的夜宴",
-    "file": "名字來不及想了.html",
-    "title": "名字來不及想了",
-    "url": "pieces/8c6def88/魔女的夜宴/名字來不及想了.html",
     "uid": 24,
     "name": "鴿子的化身",
     "image": "images/players/24.png"
